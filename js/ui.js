@@ -18,22 +18,28 @@ export function setupUI(){
   renderLista();
 }
 
-export function renderLista(){
+export function renderLista() {
   const lista = document.getElementById('listaUsuarios');
   lista.innerHTML = '';
 
   listarUsuarios(usuarios => {
+    if (usuarios.length === 0) {
+      lista.innerText = 'Lista de usuários vazia';
+      lista.style.display = 'flex';
+      lista.style.justifyContent = 'center'
+      return;
+    }
+
     usuarios.forEach(usuario => {
       const li = document.createElement('li');
-
       li.innerHTML = `
-      ${usuario.nome} (${usuario.email})
-      <button onclick="editar(${usuario.id})">Editar</button>
-      <button onclick="excluir(${usuario.id})">Excluir</button>
+        ${usuario.nome} (${usuario.email})
+        <button onclick="editar(${usuario.id})" class="btnEditar">Editar</button>
+        <button onclick="excluir(${usuario.id})" class="btnExcluir">Excluir</button>
       `;
       lista.appendChild(li);
-    })
-  })
+    });
+  });
 }
 
 window.editar = (id) => {
