@@ -1,4 +1,4 @@
-import { criarUsuarios, listarUsuarios, editarUsuarios, deletarUsuarios } from 'crud.js'
+import { criarUsuarios, listarUsuarios, editarUsuarios, deletarUsuarios } from './crud.js'
 
 export function setupUI(){
   document.getElementById('btnCriar').addEventListener('click', () => {

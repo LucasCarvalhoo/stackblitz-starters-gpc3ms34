@@ -1,4 +1,4 @@
-import { obterUsuarios, salvarUsuarios } from 'storage.js';
+import { obterUsuarios, salvarUsuarios } from './storage.js';
 
 export function criarUsuarios(nome, email) {
   const usuarios = obterUsuarios();
