@@ -1,4 +1,4 @@
-import { criarUsuarios, listarUsuarios, editarUsuarios, deletarUsuarios } from './crud.js'
+import { criarUsuarios, listarUsuarios, editarUsuario, deletarUsuario } from './crud.js'
 
 export function setupUI(){
   document.getElementById('btnCriar').addEventListener('click', () => {
@@ -41,14 +41,14 @@ window.editar = (id) => {
   const novoEmail = prompt("Novo email");
 
   if(novoNome && novoEmail){
-    editarUsuarios(id, novoNome, novoEmail);
+    editarUsuario(id, novoNome, novoEmail);
     renderLista();
   }
 }
 
 window.excluir = (id) => {
   if(confirm("Tu tem certeza?")){
-    deletarUsuarios(id);
+    deletarUsuario(id);
     renderLista();
   }
 }
