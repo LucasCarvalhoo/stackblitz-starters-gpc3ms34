@@ -123,7 +123,6 @@ ul#listaUsuarios li {
 .btnEditar, 
 .btnExcluir{
   padding: 0.7rem;
-  background-color: #ff6b6b;
   color: white;
   border: none;
   border-radius: 4px;
@@ -131,7 +130,18 @@ ul#listaUsuarios li {
   margin-right: 5px;
 }
 
-.btnEditar:hover, 
+.btnExcluir{
+  background-color: #e04040;
+}
+
+.btnEditar{
+  background-color: #33e150;
+}
+
 .btnExcluir:hover {
-  background-color: #e63946;
+  background-color: #ca303c;
+}
+
+.btnEditar:hover{
+  background-color: #28bf41;
 }
